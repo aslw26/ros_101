@@ -1,0 +1,4 @@
+<launch>
+  <node pkg='demo_pub_sub' name='demo_pub_sub' type='cmdvel_node.py' />
+  <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch"/>
+</launch>

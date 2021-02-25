@@ -15,7 +15,6 @@ class CmdVel(object):
 
 	def __init__(self):
 		self._pub = rospy.Publisher('cmd_vel', Twist, queue_size=10)
-		self.test = "TEST"
 
 	def run_once(self):
 		"""

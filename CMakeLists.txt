@@ -13,7 +13,7 @@ catkin_package(
 #  DEPENDS system_lib
 )
 
-
+### TO RUN PYTHON CODE
 catkin_python_setup()
 ###########
 ## Build ##
@@ -67,7 +67,7 @@ target_link_libraries(${PROJECT_NAME}_node
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-   scripts/cmdvel_node.py
+   scripts/pub_sub/cmdvel_node.py
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
@@ -99,9 +99,13 @@ install(TARGETS ${PROJECT_NAME}_node ${PROJECT_NODE}
    RUNTIME DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
-install(FILES scripts/cmdvel_class.py scripts/__init__.py
+install(FILES scripts/pub_sub/cmdvel_class.py scripts/pub_sub/__init__.py
 	DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
+
+install(FILES launch/test.launch
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+) 
 
 #############
 ## Testing ##

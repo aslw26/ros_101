@@ -12,7 +12,6 @@ def run():
 
 	# Instantiate the object cmdvel. Essentially from cmdvel_class.py
 	cmdvel = CmdVel()
-	print(cmdvel.test)
 	rospy.sleep(0.5)
 	rospy.loginfo('Node started')
 
